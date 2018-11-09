@@ -35,7 +35,7 @@ a,
 .list-widget__link:hover,
 .post-tags___item:hover,
 .entry-footer__link:hover,
-.owl-theme .owl-controls .owl-buttons div:hover i:after {color: #5aaff7;}
+.owl-theme .owl-controls .owl-buttons div:hover i:after {color: #E96A1D;}
 
 
 .bg-primary,
@@ -54,7 +54,7 @@ a,
 .b-advantages-4__item:nth-child(even),
 .b-pricing_sm .b-pricing__inner,
 .dash_title,
-.b-history-list__btn:hover {background-color: #5aaff7;}
+.b-history-list__btn:hover {background-color: #E96A1D;}
 
 
 .bg-border,
@@ -123,7 +123,7 @@ a,
 .b-pricing_sm:hover .b-pricing__inner,
 .b-pricing_sm:hover .b-pricing__btn,
 .b-pricing_lg:hover .b-pricing__inner,
-.b-pricing_lg:hover .b-pricing__btn {background-color: #3d75a5;}
+.b-pricing_lg:hover .b-pricing__btn {background-color: rgba(19, 3, 158, 0.77);}
 
 
 .forms__label-radio-1:before,

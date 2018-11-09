@@ -52,7 +52,7 @@
   content: '';
 }
 .parallax-light:after {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.51);
 }
 .parallax-dark:after {
   background-color:  rgba(0, 0, 0, 0.9);
