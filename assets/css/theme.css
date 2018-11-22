@@ -3840,7 +3840,8 @@ body {
 
 .yamm {
   position: relative;
-  float: right;
+  float: left;
+  /*float: right;*/
   min-height: auto;
   margin-top: 10px;
   margin-bottom: 0;
@@ -3862,8 +3863,8 @@ body {
 .yamm .nav > li {
   display: inline-block;
   float: none;
-  padding-right: 4px;
-  padding-left: 3px;
+/*  padding-right: 4px;
+  padding-left: 3px;*/
 }
 
 .yamm .nav > li > a {
