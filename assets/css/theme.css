@@ -3849,6 +3849,7 @@ body {
   border: 0 none;
   border-right: 1px solid #eee;
   z-index: 777;
+  padding-left: 5%;
 }
 
 .yamm .navbar-collapse {
@@ -3870,7 +3871,7 @@ body {
 .yamm .nav > li > a {
   position: relative;
   display: block;
-  padding: 9px 11px;
+  /*padding: 9px 11px;*/
   font-size: 13px;
   font-weight: 700;
   color: #333;
