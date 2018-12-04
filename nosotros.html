@@ -154,7 +154,21 @@ y comprometidos con realizar un trabajo de excelencia</div>
               <div class="ui-subtitle-block ui-subtitle-block_mr-btm_sm">Más de 10 años de experiencia nos acompañan...</div>
               <p>Somos un equipo de profesionales con ganas de brindar servicios de calidad y comprometidos con realizar un trabajo de excelencia. <br> NGR nació en el año 2005 junto al lanzamiento de nuestro sistema TechFood enfocado en la gestión de restaurantes el cual fue una completa solución informática para los dueños y administradores de la gastronomía nacional.<br> Con el pasar del tiempo nuestro sistema, servicios y nosotros mismos hemos ido creciendo en conjunto a nuestros clientes entendiendo sus necesidades y problemas reales lo cual a sido clave para continuar mejorando día a día.</p>
             </div>
-            <div class="col-sm-6"><img src="assets/media/content/555x300/1.jpg" alt="Foto" class="img-responsive"></div>
+            <div class="col-sm-6"><img src="assets/media/imgs/ngr.jpg" alt="Foto" class="img-responsive"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="ui-title-inner-1">Equipo NGR</h2>
+              <div class="col-md-3">
+                <img src="assets/media/imgs/eq1.JPG" class="img-responsive">
+              </div>
+              <div class="col-md-3">
+                <img src="assets/media/imgs/eq2.JPG" class="img-responsive">
+              </div>
+              <div class="col-md-3">
+                <img src="assets/media/imgs/eq3.JPG" class="img-responsive">
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -203,10 +217,26 @@ y comprometidos con realizar un trabajo de excelencia</div>
                 <div class="col-sm-6">
                   <div class="footer-main-section footer-main-section_right">
                     <div class="footer-form__info">Suscríbete y recibe nuestras promociones!</div>
-                    <form class="footer-form">
-                      <input type="text" placeholder="Ingresa tu correo ..." class="footer-form__input"/>
+                    <form class="footer-form" id="newsletter-form" action="enviar_news.php">
+                      <input type="text" name="email" placeholder="Ingresa tu correo ..." class="footer-form__input"/>
                       <button class="footer-form__btn"><i class="icon pe-7s-mail"></i></button>
                     </form>
+                    <div class="alert alert-success alert-dismissible hidden" role="alert" id="alert-success">
+                      <div id="success">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="wrapper">
+                          <p>Muchas gracias por suscribirte!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible hidden" role="alert" id="alert-error">
+                      <div id="error">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="wrapper">
+                          <p>Perdón, algo salió mal.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -235,8 +265,10 @@ y comprometidos con realizar un trabajo de excelencia</div>
 
 
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/custom.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/custom.js"></script>
 
     <script src="assets/plugins/slider-pro/jquery.sliderPro.min.js"></script>
     <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>

@@ -168,26 +168,42 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <form action="#" method="post" class="ui-form ui-form-2">
+              <form action="enviar.php" method="post" class="ui-form ui-form-2" id="contact-form">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
                       <div class="col-md-6">
-                        <input type="text" placeholder="Nombre" class="form-control">
-                        <input type="email" placeholder="Email" class="form-control">
+                        <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                        <input type="email" name="email" placeholder="Email" class="form-control">
                       </div>
                       <div class="col-md-6">
-                        <input type="tel" placeholder="Teléfono" class="form-control">
-                        <input type="text" placeholder="Asunto" class="form-control">
+                        <input type="tel" name="telefono" placeholder="Teléfono" class="form-control">
+                        <input type="text" name="asunto" placeholder="Asunto" class="form-control">
                       </div>
                     </div>
                     <button class="ui-form__btn btn btn-primary btn-sm btn-effect btn-block">Enviar Mensaje</button>
                   </div>
                   <div class="col-md-6">
-                    <textarea rows="7" placeholder="Escribe aquí tu consulta..." class="form-control"></textarea>
+                    <textarea rows="7" placeholder="Escribe aquí tu consulta..." class="form-control" name="mensaje"></textarea>
                   </div>
                 </div>
               </form>
+              <div class="alert alert-success alert-dismissible hidden" role="alert" id="alert-success">
+                <div id="success">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="wrapper">
+                    <p>Hemos recibido su mensaje, nos contactaremos con usted a la brevedad</p>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert-danger alert-dismissible hidden" role="alert" id="alert-error">
+                <div id="error">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="wrapper">
+                    <p>Perdón, algo salió mal.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,10 +251,26 @@
                 <div class="col-sm-6">
                   <div class="footer-main-section footer-main-section_right">
                     <div class="footer-form__info">Suscríbete y recibe nuestras promociones!</div>
-                    <form class="footer-form">
-                      <input type="text" placeholder="Ingresa tu correo ..." class="footer-form__input"/>
+                    <form class="footer-form" id="newsletter-form" action="enviar_news.php">
+                      <input type="text" name="email" placeholder="Ingresa tu correo ..." class="footer-form__input"/>
                       <button class="footer-form__btn"><i class="icon pe-7s-mail"></i></button>
                     </form>
+                    <div class="alert alert-success alert-dismissible hidden" role="alert" id="alert-success">
+                      <div id="success">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="wrapper">
+                          <p>Muchas gracias por suscribirte!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible hidden" role="alert" id="alert-error">
+                      <div id="error">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="wrapper">
+                          <p>Perdón, algo salió mal.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -267,8 +299,10 @@
 
 
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/custom.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/custom.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC67Uux9Qp6uTRq33vwvvnAkJWjVgu4Es&sensor=false"></script>
     <script src="assets/js/custom-map.js"></script>

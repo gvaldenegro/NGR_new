@@ -226,6 +226,89 @@ $( '.navbar-nav li:has(ul)' ).doubleTapToGo();
     }
 
 
+    // Contact Form Validation
+
+    if ($("#contact-form").length) {
+        $("#contact-form").validate({
+            rules: {
+                nombre: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                telefono: {
+                    required: true
+                },
+                asunto: {
+                    required: true
+                },
+                mensaje: {
+                    required: true
+                }
+            },
+            messages: {
+                nombre: {
+                    required: "Ingrese su nombre"
+                },
+                email: {
+                    required: "Ingrese su correo electrónico",
+                    email: "Ingrese un correo electrónico valido"
+                },
+                telefono: {
+                    required: "Ingrese su número de teléfono"
+                },
+                asunto: {
+                    required: "Ingrese su asunto"
+                },
+                mensaje: {
+                    required: "Ingrese su mensaje"
+                }
+            },
+            submitHandler: function(form) {
+                $(form).ajaxSubmit({
+                    success: function(data) {
+                        $("#alert-success").removeClass('hidden');
+                    },
+                    error: function() {
+                        $("#alert-error").removeClass('hidden');
+                    }
+                });
+            }
+        });
+    }
+
+    // Newsletter Form Validation
+
+    if ($("#newsletter-form").length) {
+        $("#newsletter-form").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                email: {
+                    required: "Ingrese su correo electrónico",
+                    email: "Ingrese un correo electrónico valido"
+                }
+            },
+            submitHandler: function(form) {
+                $(form).ajaxSubmit({
+                    success: function(data) {
+                        $("#alert-success").removeClass('hidden');
+                    },
+                    error: function() {
+                        $("#alert-error").removeClass('hidden');
+                    }
+                });
+            }
+        });
+    }
+
+
 
   /////////////////////////////////////
   //  Chars Start
